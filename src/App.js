@@ -1,13 +1,23 @@
-import React from "react";
-import Updates from "./Updates"; 
+import React, { useState } from "react";
+import Navbar from "./Components/Navbar";
+import Updates from "./Updates";
 
 function App() {
+  const [category, setCategory] = useState('general'); 
+
+  const changeCategory = (newCategory) => {
+    setCategory(newCategory); 
+  };
+
   return (
     <>
       <h1 className="text-center">
         Hot <span className="badge bg-danger">News</span>
       </h1>
-      <Updates />
+      {}
+      <Navbar changeCategory={changeCategory} />
+      {}
+      <Updates category={category} />
     </>
   );
 }
