@@ -1,4 +1,5 @@
 import React from 'react';
+import './Updateitems.css';
 
 const Updateitems = ({ updatenews }) => {
   return (
